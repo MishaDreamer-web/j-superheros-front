@@ -24,16 +24,6 @@ export const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          {/* <NavLink
-            to={'/superheros'}
-            href="/"
-            className="text-xs text-gray-400 hover:text-white"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
-          >
-            Superheros
-          </NavLink> */}
-        </li>
-        <li>
           <NavLink
             to={'/new'}
             href="/"

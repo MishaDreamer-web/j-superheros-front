@@ -39,7 +39,7 @@ export const EditSuperheroPage = () => {
       dataSuperhero.append('superpowers', superpowers);
       dataSuperhero.append('catch_phrase', catchphrase);
       dataSuperhero.append('id', params.id);
-      dataSuperhero.append('images', oldImage);
+      dataSuperhero.append('images', newImage);
 
       dispatch(updateSuperhero(dataSuperhero));
       toast('Superhero has been updated');
@@ -68,9 +68,6 @@ export const EditSuperheroPage = () => {
   return (
     <form className="w-80 mx-auto py-10" onSubmit={e => e.preventDefault()}>
       <div className="flex flex-col object-cover p-2">
-        {/* {oldImage && (
-          <img src={`http://localhost:3002/${oldImage}`} alt={nickname} />
-        )} */}
         {newImage && <img src={URL.createObjectURL(newImage)} alt={nickname} />}
       </div>
 
@@ -81,7 +78,6 @@ export const EditSuperheroPage = () => {
           className="hidden"
           onChange={e => {
             setNewImage(e.target.files[0]);
-            // setOldImage('');
           }}
         />
       </label>
